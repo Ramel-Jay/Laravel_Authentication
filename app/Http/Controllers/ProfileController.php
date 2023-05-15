@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
@@ -38,9 +39,9 @@ class ProfileController extends Controller
 
         if ($request->hasFile('image_path')){
             $path = $request->image_path->store('avatar', 'public');
+            $request->user()->image_path = $path;
         }
-
-        $request->user()->image_path = $path;
+        //dd($request->all());
         $request->user()->save();
 
 
@@ -67,4 +68,20 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+
+    //Search User
+    public function search(){
+
+        $query = request()->query('query');
+        if($query){
+            // dd(request()->query('query'));
+            $users = User::where('first_name', 'LIKE', "%{$query}%")->simplePaginate(10);
+        } else {
+            $users = User::simplePaginate(10);
+        }
+
+        return view('dashboard')->with('users', $users);
+    }
+
 }
