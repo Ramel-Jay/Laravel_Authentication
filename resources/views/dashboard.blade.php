@@ -1,4 +1,24 @@
+<style>
+    .user-bg{
+        margin: 0;
+        padding: 0;
+        background-image: url('/images/user_bg.jpg');
+        background-repeat: no-repaet;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .waray{
+            margin: 0;
+            padding: 0;
+            background-image: url('/images/users_page.jpg');
+            background-repeat: no-repaet;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+    }
+</style>
 <x-app-layout>
+    <div class="waray">
     <div>
         <form class="input-group" action="{{ route('search.user') }}" method="GET">
             @csrf
@@ -42,40 +62,24 @@
         </tbody>
     </table> --}}
 
+    <br/>
     <div class="flex gap-10 justify-center">
-
         @foreach ($users as $user)
-        <div class="max-w-xs">
-            <div class="bg-white shadow-xl rounded-lg py-3 w-56 h-70">
-                <div class="photo-wrapper p-2">
-                    <img class="w-20 h-20 rounded-full mx-auto" src="{{ $user->image_path }}" alt="John Doe">
-                </div>
+        <div class="max-w-xs relative">
+            <div class="photo-wrapper">
+                <img class="w-20 h-20 rounded-full mx-auto absolute -top-16 left-16 border-2" src="{{ $user->image_path }}" alt="User Profiles">
+            </div>
+            <div class="user-bg shadow-xl rounded-lg py-3 w-56">
                 <div class="p-2">
-                    <h3 class="text-center text-xl text-gray-900 font-medium leading-8">{{ $user->first_name }} {{ $user->last_name }}</h3>
+                    <h3 class="text-center text-xl text-white font-medium leading-8">{{ $user->first_name }} {{ $user->last_name }}</h3>
                     <div class="text-center text-gray-400 text-xs font-semibold">
                         <p>{{ $user->email }}</p>
                     </div>
-                    {{-- <table class="text-xs my-3">
-                        <tbody><tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">First Name</td>
-                            <td class="px-2 py-2">{{ $user->first_name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">Last Name</td>
-                            <td class="px-2 py-2">{{ $user->last_name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">Email</td>
-                            <td class="px-2 py-2">{{ $user->email }}</td>
-                        </tr>
-                    </tbody></table> --}}
-
                 </div>
             </div>
         </div>
         @endforeach
-
         </div>
+    </div>
 </div>
-
 </x-app-layout>
