@@ -17,9 +17,25 @@
         @csrf
         @method('patch')
 
-        <img src={{ $user->image_path }} alt="" style="width:50px; height: 50px;"/>
+        {{-- <img src={{ $user->image_path }} alt="" style="width:50px; height: 50px;"/>
 
-        <input type="file" id="image_path" name="image_path" />
+        <input type="file" id="image_path" name="image_path" /> --}}
+
+        <div class="flex items-center space-x-6">
+            <div class="shrink-0">
+              <img id='preview_img' class="h-16 w-16 object-cover rounded-full" src="{{ $user->image_path }}" alt="Current profile photo" />
+            </div>
+            <label class="block">
+              <span class="sr-only">Choose profile photo</span>
+              <input type="file" id="imag_path" name="image_path" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-full file:border-0
+                file:text-sm file:font-semibold
+                file:bg-violet-50 file:text-violet-700
+                hover:file:bg-violet-100
+              "/>
+            </label>
+          </div>
 
         <div>
             <x-input-label for="first_name" :value="__('First Name')" />
@@ -71,4 +87,20 @@
             @endif
         </div>
     </form>
+    <script>
+            var loadFile = function(event) {
+
+                var input = event.target;
+                var file = input.files[0];
+                var type = file.type;
+
+            var output = document.getElementById('preview_img');
+
+
+                output.src = URL.createObjectURL(event.target.files[0]);
+                output.onload = function() {
+                    URL.revokeObjectURL(output.src) // free memory
+                }
+            };
+    </script>
 </section>

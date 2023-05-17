@@ -2,7 +2,32 @@
     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
-        <input type="file" id="image_path" name="image_path" />
+        <div class="flex flex-col justify-center items-center my-4">
+            <img id='preview_img' class="h-24 w-24 object-cover rounded-full flex justify-center mb-4" src="{{ asset("/images/default_avatar.jpg") }}" alt="Current profile photo" />
+            <input type="file" id="image_path" name="image_path" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-violet-700
+            hover:file:bg-violet-100
+          "/>
+            <x-input-error :messages="$errors->get('image_path')" class="mt-2"/>
+        </div>
+
+        {{-- <div class="shrink-0">
+            <img id='preview_img' class="h-16 w-16 object-cover rounded-full" src="{{ asset("/images/default_avatar.jpg") }}" alt="Current profile photo" />
+        </div>
+        <label class="block">
+            <span class="sr-only">Choose profile photo</span>
+            <input type="file" id="image_input" name="image_input" <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script> class="block w-full text-sm text-slate-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-violet-50 file:text-violet-700
+              hover:file:bg-violet-100
+            "/>
+        </label> --}}
+
 
         <!-- First Name -->
         <div>
@@ -58,4 +83,21 @@
             </x-primary-button>
         </div>
     </form>
+
+    <script>
+            var loadFile = function(event) {
+
+                var input = event.target;
+                var file = input.files[0];
+                var type = file.type;
+
+            var output = document.getElementById('preview_img');
+
+
+                output.src = URL.createObjectURL(event.target.files[0]);
+                output.onload = function() {
+                    URL.revokeObjectURL(output.src) // free memory
+                }
+            };
+    </script>
 </x-guest-layout>

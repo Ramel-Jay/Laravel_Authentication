@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
             'last_name'             => ['required', 'string', 'max:255'],
             'email'                 => ['required', 'string', 'max:255', 'unique:'.User::class],
             'password'              => ['required', 'confirmed', Rules\Password::defaults()],
-            'image_path'            => 'nullable|file|mimes:jpeg,png,jpg|max:2048'
+            'image_path'            => 'required|file|mimes:jpeg,png,jpg|max:2048'
         ]);
 
         $imagePath = null;

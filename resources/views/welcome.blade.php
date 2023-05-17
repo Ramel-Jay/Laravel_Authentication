@@ -89,8 +89,8 @@
         </div>
 
         <div class="flex min-h-screen items-center justify-center flex-col">
-            <div class="w-max mb-4">
-                <h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-white font-bold">Gamers Never Die</h1>
+            <div class="w-max mb-8">
+                <h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-8xl text-white font-extrabold uppercase ">Gamers Never Die</h1>
             </div>
             <button class="font-medium text-white border-2 hover:bg-red-600 w-60 h-16 rounded-full duration-500">Find Tournament</button>
         </div>
