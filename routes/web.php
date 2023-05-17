@@ -19,10 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/users', function() {
     $users = User::all();
     // return response($user);
-    return view('dashboard', compact('users'));
+    return view('users', compact('users'));
+})->middleware(['auth', 'verified'])->name('users');;
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
