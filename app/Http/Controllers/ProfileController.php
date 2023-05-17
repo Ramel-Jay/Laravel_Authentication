@@ -81,7 +81,7 @@ class ProfileController extends Controller
             $users = User::simplePaginate(10);
         }
 
-        return view('dashboard')->with('users', $users);
+        return view('users')->with('users', $users);
     }
 
 }
