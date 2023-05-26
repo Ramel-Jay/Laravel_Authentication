@@ -16,117 +16,142 @@
         </div>
     </div>
 
-    <div class="py-10 flex justify-center w-screen">
-        <div class="flex">
-            <img class="lg:w-[1000px]" src="{{ asset("/images/tournament_ml_poster.jpg") }}"/>
-        </div>
-        <div class="text-white bg-black w-64 px-4 py-6">
-            <div>
-                <h1 class="font-bold text-4xl pb-4">ONE Esports Community Tournament 2023</h1>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
-                <div class="flex items-center">
-                    <img class="w-14 h-14 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
-                    <h1 class="font-bold text-lg">One Esports</h1>
+    <div>
+        <div class="py-10 flex justify-center">
+                <img class="w-1/2" src="{{ asset("/images/tournament_ml_poster.jpg") }}"/>
+            <div class="text-white bg-black w-64 px-4 py-6">
+                <div>
+                    <h1 class="font-bold text-2xl pb-4">ONE Esports Community Tournament 2023</h1>
                 </div>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <div class="flex items-center pb-4">
-                    <i class="fa-solid fa-calendar mr-6"></i>
-                    <h1 class="font-bold">On Going</h1>
+                <hr/>
+                <div class="py-4">
+                    <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
+                        <h1 class="font-bold text-lg">One Esports</h1>
+                    </div>
                 </div>
-                <div class="flex items-center">
-                    <i class="fa-solid fa-trophy mr-6"></i>
-                    <h1 class="font-bold">$225 USD Prize Pool</h1>
+                <hr/>
+                <div class="py-4">
+                    <div class="flex items-center pb-4">
+                        <i class="fa-solid fa-calendar mr-6"></i>
+                        <h1 class="font-bold">On Going</h1>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-trophy mr-6"></i>
+                        <h1 class="font-bold">$225 USD Prize Pool</h1>
+                    </div>
                 </div>
-            </div>
-            <hr/>
-            <div class="flex justify-center py-4">
-                <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="py-10 flex justify-center w-screen">
-        <div class="flex">
-            <img class="lg:w-[1000px]" src="{{ asset("/images/codm_poster.jpg") }}"/>
-        </div>
-        <div class="text-white bg-black w-64 px-4 py-6">
-            <div>
-                <h1 class="font-bold text-4xl pb-4">ONE Esports Community Tournament 2023</h1>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
-                <div class="flex items-center">
-                    <img class="w-14 h-14 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
-                    <h1 class="font-bold text-lg">One Esports</h1>
+                <hr/>
+                <div class="flex justify-center py-4">
+                    <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
                 </div>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <div class="flex items-center pb-4">
-                    <i class="fa-solid fa-calendar mr-6"></i>
-                    <h1 class="font-bold">On Going</h1>
-                </div>
-                <div class="flex items-center">
-                    <i class="fa-solid fa-trophy mr-6"></i>
-                    <h1 class="font-bold">$225 USD Prize Pool</h1>
-                </div>
-            </div>
-            <hr/>
-            <div class="flex justify-center py-4">
-                <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
             </div>
         </div>
     </div>
 
-    <div class="py-10 flex justify-center w-screen">
-        <div class="flex">
-            <img class="lg:w-[1000px]" src="{{ asset("/images/dota2_poster.jpg") }}"/>
+    <div>
+        <div class="py-10 flex justify-center">
+                <img class="w-1/2" src="{{ asset("/images/codm_poster.jpg") }}"/>
+            <div class="text-white bg-black w-64 px-4 py-6">
+                <div>
+                    <h1 class="font-bold text-2xl pb-4">ONE Esports Community Tournament 2023</h1>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
+                        <h1 class="font-bold text-lg">One Esports</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <div class="flex items-center pb-4">
+                        <i class="fa-solid fa-calendar mr-6"></i>
+                        <h1 class="font-bold">On Going</h1>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-trophy mr-6"></i>
+                        <h1 class="font-bold">$225 USD Prize Pool</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="flex justify-center py-4">
+                    <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
+                </div>
+            </div>
         </div>
-        <div class="text-white bg-black w-64 px-4 py-6">
-            <div>
-                <h1 class="font-bold text-4xl pb-4">ONE Esports Community Tournament 2023</h1>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
-                <div class="flex items-center">
-                    <img class="w-14 h-14 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
-                    <h1 class="font-bold text-lg">One Esports</h1>
-                </div>
-            </div>
-            <hr/>
-            <div class="py-4">
-                <div class="flex items-center pb-4">
-                    <i class="fa-solid fa-calendar mr-6"></i>
-                    <h1 class="font-bold">On Going</h1>
-                </div>
-                <div class="flex items-center">
-                    <i class="fa-solid fa-trophy mr-6"></i>
-                    <h1 class="font-bold">$225 USD Prize Pool</h1>
-                </div>
-            </div>
-            <hr/>
-            <div class="flex justify-center py-4">
-                <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
-            </div>
-        </div>
-    </div>
-    <div class="w-full">
-        @include("layouts.footer");
     </div>
 
-    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-    <script>
-        function showDropdownOptions() {
-            document.getElementById("options").classList.toggle("hidden");
-            document.getElementById("arrow-up").classList.toggle("hidden");
-            document.getElementById("arrow-down").classList.toggle("hidden");
-        }
-    </script>
+    <div>
+        <div class="py-10 flex justify-center">
+                <img class="w-1/2" src="{{ asset("/images/dota2_poster.jpg") }}"/>
+            <div class="text-white bg-black w-64 px-4 py-6">
+                <div>
+                    <h1 class="font-bold text-2xl pb-4">ONE Esports Community Tournament 2023</h1>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
+                        <h1 class="font-bold text-lg">One Esports</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <div class="flex items-center pb-4">
+                        <i class="fa-solid fa-calendar mr-6"></i>
+                        <h1 class="font-bold">On Going</h1>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-trophy mr-6"></i>
+                        <h1 class="font-bold">$225 USD Prize Pool</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="flex justify-center py-4">
+                    <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="py-10 flex justify-center">
+                <img class="w-1/2" src="{{ asset("/images/tournament_ml_poster.jpg") }}"/>
+            <div class="text-white bg-black w-64 px-4 py-6">
+                <div>
+                    <h1 class="font-bold text-2xl pb-4">ONE Esports Community Tournament 2023</h1>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <h1 class="text-gray-400 uppercase font-bold pb-3">Hosted By</h1>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-md mr-2" src="{{ asset("/images/one_esports_logo.jpg") }}">
+                        <h1 class="font-bold text-lg">One Esports</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="py-4">
+                    <div class="flex items-center pb-4">
+                        <i class="fa-solid fa-calendar mr-6"></i>
+                        <h1 class="font-bold">On Going</h1>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-trophy mr-6"></i>
+                        <h1 class="font-bold">$225 USD Prize Pool</h1>
+                    </div>
+                </div>
+                <hr/>
+                <div class="flex justify-center py-4">
+                    <button class="bg-red-600 w-3/4 h-12 font-bold text-lg rounded-lg hover:bg-red-400">Join</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @include('layouts.footer')
+    </div>
 </x-app-layout>

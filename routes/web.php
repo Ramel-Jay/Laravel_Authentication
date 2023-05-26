@@ -23,7 +23,11 @@ Route::get('/users', function() {
     $users = User::all();
     // return response($user);
     return view('users', compact('users'));
-})->middleware(['auth', 'verified'])->name('users');;
+})->middleware(['auth', 'verified'])->name('users');
+
+Route::get('/myteam', function() {
+    return view('myteam');
+})->middleware(['auth', 'verified'])->name('myteam');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
