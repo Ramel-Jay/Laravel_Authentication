@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //$table->text('image_path');
+        Schema::create('roles', function (Blueprint $table) {
+            $table->id();
+            $table->string('role');
+            $table->timestamps();
         });
     }
 

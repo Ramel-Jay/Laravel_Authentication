@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\MyTeamController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Roles;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +27,14 @@ Route::get('/users', function() {
     return view('users', compact('users'));
 })->middleware(['auth', 'verified'])->name('users');
 
-Route::get('/myteam', function() {
-    return view('myteam');
-})->middleware(['auth', 'verified'])->name('myteam');
+// Route::get('/myteam', function() {
+//     $roles = Roles::all();
+//     dd($roles);
+//     return view('myteam', compact('roles'));
+// })->middleware(['auth', 'verified'])->name('myteam');
+
+Route::get('/myteam', [MyTeamController::class, 'index'])->middleware(['auth', 'verified'])->name('myteam');
+Route::post('/myteam', [MyTeamController::class, 'store'])->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
