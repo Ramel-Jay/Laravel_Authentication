@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
+        @vite(['resources/css/app.css','resources/js/app.js'])
+
         <script>
             tailwind.config = {
                 theme: {
