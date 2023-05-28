@@ -23,6 +23,16 @@
                         <div class="flex flex-col">
 
                             <div>
+                                <label for="game" class="block mb-2 text-sm font-medium text-white">Select Role</label>
+                                <select id="game" name="user_id" class="border text-sm rounded-l block w-full p-2.5 bg-gray-900 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
+                                    <option selected>Captain</option>
+                                    @foreach ($users as $user)
+                                        <option value="{{ $user->id }}">{{ $user->first_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div>
                                 <x-input-label for="first_name" :value="__('First Name')" />
                                 <x-text-input id="first_name" name="first_name" type="text" class="mt-1 block w-full" :value="old('first_name')" required autofocus autocomplete="off" />
                                 <x-input-error class="mt-2" :messages="$errors->get('first_name')" />
@@ -82,6 +92,9 @@
             <thead class="text-xs uppercase bg-gray-700 text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
+                        Captain
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         First Name
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -105,6 +118,9 @@
                 @foreach ($myteam as $player)
                     <tr class="border-b bg-gray-800 border-gray-700">
                         <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-white">
+                            {{ $player->users->first_name }}
+                        </th>
+                        <th scope="row" class="px-6 py-4">
                             {{ $player->first_name }}
                         </th>
                         <td class="px-6 py-4">

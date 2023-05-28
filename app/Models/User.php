@@ -25,6 +25,11 @@ class User extends Authenticatable
         'image_path'
     ];
 
+    public function myteam()
+    {
+        return $this->hasMany(Myteam::class, 'user_id', 'id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
