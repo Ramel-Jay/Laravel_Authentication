@@ -12,7 +12,7 @@ class MyTeamController extends Controller
 {
     public function index(){
         $roles = Roles::all();
-        $myteam = Myteam::all();
+        $myteam = Myteam::where('user_id', Auth::user()->id)->get();
         $users = User::all();
         //dd($roles);
         return view('myteam', compact('roles', 'myteam', 'users'));
@@ -23,7 +23,7 @@ class MyTeamController extends Controller
         // $role = User::findOrFail($request->user_id);
         Myteam::create([
             'role_id'               => $request->role_id,
-            'user_id'               => $request->user_id,
+            'user_id'               => Auth::user()->id,
             'first_name'            => $request->first_name,
             'last_name'             => $request->last_name,
             'ign'                   => $request->ign,

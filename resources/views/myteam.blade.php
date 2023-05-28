@@ -22,7 +22,7 @@
 
                         <div class="flex flex-col">
 
-                            <div>
+                            {{-- <div>
                                 <label for="game" class="block mb-2 text-sm font-medium text-white">Select Role</label>
                                 <select id="game" name="user_id" class="border text-sm rounded-l block w-full p-2.5 bg-gray-900 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
                                     <option selected>Captain</option>
@@ -30,7 +30,7 @@
                                         <option value="{{ $user->id }}">{{ $user->first_name }}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div> --}}
 
                             <div>
                                 <x-input-label for="first_name" :value="__('First Name')" />
